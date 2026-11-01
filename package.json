@@ -12,16 +12,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.2.2",
-    "@astrojs/rss": "^4.0.18",
+    "@astrojs/cloudflare": "^13.7.0",
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
-    "@fontsource-variable/dm-sans": "^5.2.8",
-    "@fontsource-variable/fira-code": "^5.2.7",
-    "@fontsource-variable/syne": "^5.2.7",
-    "@fontsource/instrument-serif": "^5.2.8",
-    "astro": "^6.1.10"
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/fira-code": "^5.3.0",
+    "@fontsource-variable/syne": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "astro": "^6.4.8"
   },
   "devDependencies": {
-    "wrangler": "^4.86.0"
+    "wrangler": "^4.156.0"
   }
 }

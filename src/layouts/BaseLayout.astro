@@ -9,13 +9,15 @@ interface Props {
   description?: string;
   image?: string;
   article?: boolean;
+  noindex?: boolean;
 }
 
 const { 
   title = "Ovieh Mosley | Brewing Up Code", 
   description = "Personal blog and portfolio of Ovieh Mosley.",
   image = "/img/profile.jpg",
-  article = false 
+  article = false,
+  noindex = false
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -34,6 +36,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex" />}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={article ? 'article' : 'website'} />

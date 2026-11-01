@@ -1,0 +1,83 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "MosleyOS | Ovieh Mosley";
+const description =
+	"MosleyOS is a private, invite-only family organizer for one household's schedule, meals, and documents.";
+---
+
+<BaseLayout title={title} description={description} noindex>
+  <Header slot="header" />
+
+  <article class="app-page">
+    <header class="app-header">
+      <p class="eyebrow font-mono text-accent">// MOSLEYOS</p>
+      <h1 class="font-serif">MosleyOS</h1>
+      <p class="lede">A private family organizer for one household.</p>
+    </header>
+
+    <div class="post-content">
+      <p>
+        MosleyOS keeps a family's schedule, meal plans, shopping list, and important documents in one
+        place. It works offline on each family member's phone and syncs between devices when a
+        connection is available.
+      </p>
+      <p>
+        It is not a public app. Accounts are created by invitation only, and there is no public
+        sign-up. The app is installed directly on the family's own devices rather than through an
+        app store.
+      </p>
+
+      <h2>Google Calendar</h2>
+      <p>
+        A household can choose to copy its MosleyOS events to one Google Calendar it already uses, so
+        the family schedule also shows up there. The copy is one way: MosleyOS adds, updates, and
+        removes the events it created, and doesn't read or change anything else in the Google
+        account.
+      </p>
+
+      <h2>Privacy and contact</h2>
+      <p>
+        Read the <a href="/mosleyos/privacy">MosleyOS privacy policy</a> for what the app stores and
+        how Google data is used. Questions go to <a href="mailto:mosley@ovieh.com">mosley@ovieh.com</a>.
+      </p>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .app-page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 6rem 1rem;
+  }
+
+  .app-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 3rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .lede {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+</style>
